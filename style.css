@@ -75,14 +75,22 @@ body {
 
 .chat {
     flex: 1;
-    overflow-y: auto;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch; /* ΠΠ»Π°Π²Π½Ρ‹ΠΉ ΡΠΊΡ€ΠΎΠ»Π» Π½Π° iOS */
     padding: 10px;
     background-image: url('bek.jpg');
     background-size: cover;
     display: flex;
     flex-direction: column;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
-
+    .chat::-webkit-scrollbar {
+        display: none;
+        width: 0;
+        height: 0;
+        background: transparent;
+    }
 .message {
     max-width: 80%;
     padding: 8px 12px;
@@ -197,23 +205,23 @@ body {
 
 @keyframes typing {
     0% {
-        content: "οεχΰςΰες";
+        content: "ΠΏΠµΡ‡Π°Ρ‚Π°ΠµΡ‚";
     }
 
     33% {
-        content: "οεχΰςΰες.";
+        content: "ΠΏΠµΡ‡Π°Ρ‚Π°ΠµΡ‚.";
     }
 
     66% {
-        content: "οεχΰςΰες..";
+        content: "ΠΏΠµΡ‡Π°Ρ‚Π°ΠµΡ‚..";
     }
 
     100% {
-        content: "οεχΰςΰες...";
+        content: "ΠΏΠµΡ‡Π°Ρ‚Π°ΠµΡ‚...";
     }
 }
 
 .typing::after {
-    content: "οεχΰςΰες...";
+    content: "ΠΏΠµΡ‡Π°Ρ‚Π°ΠµΡ‚...";
     animation: typing 1.5s infinite;
 }
