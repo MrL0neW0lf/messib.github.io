@@ -28,7 +28,7 @@ const dialog = {
         options: []
         
     },
-    mov: {
+    mov: { 
         msg: "Хорошо, я поняла. Я - Ольга.",
         options: [
             { text: "АААААААААААААААА женщина!!!!!", next: "bad" },
@@ -38,7 +38,7 @@ const dialog = {
         ]
     },
     haiti_start: {
-        msg: "О... это с Гаити. Я там была... *странная история*.",
+        msg: "О... это с Гаити. Я там была... странная история.",
         options: [
             { text: "Расскажи!", next: "haiti_story" },
             { text: "Ты точно не пиратский бот?", next: "pirate_bot" },
@@ -71,7 +71,7 @@ const dialog = {
     },
     papyrus: {
         msg: "ДА! Но потом *пришли обезьяны* и *съели* половину транзакций!",
-        options: [
+        options: [ 
             { text: "Это же натуральный 51% attack!", next: "attack" },
             { text: "Значит, обезьяны — новые киберпреступники?", next: "monkeys" },
             { text: "И как ты выжила?", next: "escape" }
@@ -148,11 +148,11 @@ const dialog = {
         options: [
             { text: "О, значит, ты разбираешься в технологиях!", next: "tech" },
             { text: "А я был Музой (нет)", next: "bad" },
-            { text: "Так вот почему ты про компы спрашиваешь!", next: "job0" }
+            { text: "Так вот почему ты про компы спрашиваешь!", next: "job" }
         ]
     },
     job2: {
-        msg: "Что? Да нет же, она скачала терабайты миленьких котят",
+        msg: "Что? Да нет же, просто бабушка скачала терабайты миленьких котят",
         options: [
             { text: "Оу...", next: "job3" },
             { text: "Так и знал)", next: "job3" },
@@ -285,7 +285,7 @@ const dialog = {
         ]
     },
     deep_fake: {
-        msg: "Хуже! Она использовала *нейросеть*! Но зачем-то вводила запрос 'коты, но как в 90-е'...",
+        msg: "Хуже! Она использовала *нейросеть*! Но зачем-то вводила запрос 'коты, но как в 90-е'... эхх её молодость. Ей тогда было 14.1 лет",
         options: [
             { text: "И... они превратились в низкополигональных?", next: "low_poly" },
             { text: "А что было в папке 'Мои эксперименты'?", next: "experiments" },
@@ -608,7 +608,7 @@ function showOptions(opts) {
             addMessage(opt.text, false);
             options.innerHTML = '';
 
-            const typingTime = Math.random() * 3000 + 2000;
+            const typingTime = Math.random() * 5000 + 7000;
             status.textContent = "";
             status.classList.add('typing');
 
